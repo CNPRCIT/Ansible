@@ -9,11 +9,11 @@
      register: test
      changed_when: test.stdout
 
-   - name: Updates a server
+   - name: Updates Kiosk apt-cache
      apt:
        update_cache: yes
 
-   - name: Upgrade a server
+   - name: Upgrade a Kiosk
      apt:
        upgrade: dist
 
@@ -31,7 +31,7 @@
        path: /var/run/reboot-required
      register: reboot_required_file
 
-   - name: Rebooting machine
+   - name: Rebooting the Kiosk
      shell: sleep 2 && shutdown -r now
      async: 1
      poll: 0
