@@ -1,6 +1,7 @@
 ---
-- hosts: all
+- hosts: NOC
   become: true
+  gather_facts: False
 
   tasks:
     - name: Turn on Kiosk Monitor
