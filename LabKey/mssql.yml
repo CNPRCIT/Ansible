@@ -1,9 +1,0 @@
----
-- hosts: mssql
-  become: true
-  gather_facts: false
-  vars_files:
-    - '/home/cnprc/lbky.yml'
-  roles:
-    - common
-    - mssql
