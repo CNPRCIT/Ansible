@@ -32,5 +32,5 @@
 
     - name: Reboot
       win_reboot:
-        reboot_timeout: 1200
+        reboot_timeout: 600
 
