@@ -3,8 +3,9 @@
   serial: 1
   gather_facts: False
   vars:
-   timestamp: "{{lookup('pipe', 'date +%Y%m%d%H%M%S')}}"
+    timestamp: "{{lookup('pipe', 'date +%Y%m%d%H%M%S')}}"
   connection: local
+  
   tasks:
     - name: Take Snapshot of Guest VM
       vmware_guest_snapshot:
