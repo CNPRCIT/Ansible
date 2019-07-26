@@ -2,9 +2,6 @@
 - hosts: all
   serial: 1
   gather_facts: False
-  vars_prompt:
-    - name: "vcenter_password"
-      prompt: "vCenter Password"
   connection: local
   
   tasks:
