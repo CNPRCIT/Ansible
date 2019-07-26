@@ -20,4 +20,4 @@
         state: present
         snapshot_name: 'Snapshot_{{ timestamp }}'
         description: Automated PM snapshot from Ansible.
-       delegate_to: localhost
+      delegate_to: localhost
