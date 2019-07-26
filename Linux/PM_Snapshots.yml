@@ -2,6 +2,9 @@
 - hosts: all
   serial: 1
   gather_facts: False
+  vars_prompt:
+    -name: "vcenter_password"
+     prompt: "vCenter Password"
   vars:
     timestamp: "{{lookup('pipe', 'date +%Y%m%d%H%M%S')}}"
   connection: local
@@ -10,8 +13,8 @@
     - name: Take Snapshot of Guest VM
       vmware_guest_snapshot:
         validate_certs: false
-        hostname: "{{ vcenter_hostname }}"
-        username: "{{ vcenter_username }}"
+        hostname: "169.237.80.110"
+        username: "administrator@vsphere.local"
         password: "{{ vcenter_password }}"
         datacenter: CNPRC
         
